@@ -1644,7 +1644,6 @@ define('select2/selection/search',[
 
     container.on('open', function () {
       self.$search.attr('tabindex', 0);
-
       self.$search.focus();
     });
 
@@ -1664,6 +1663,10 @@ define('select2/selection/search',[
 
     this.$selection.on('keydown', '.select2-search--inline', function (evt) {
       evt.stopPropagation();
+
+        if (!container.isOpen()) {
+            self.trigger('open');
+        }
 
       self.trigger('keypress', evt);
 
@@ -3994,7 +3997,7 @@ define('select2/i18n/en',[],function () {
     inputTooShort: function (args) {
       var remainingChars = args.minimum - args.input.length;
 
-      var message = 'Please enter ' + remainingChars + ' or more characters';
+      var message = '';
 
       return message;
     },
