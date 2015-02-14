@@ -763,6 +763,7 @@ define('select2/results',[
 
         if (item.id != null && selectedIds.indexOf(item.id.toString()) > -1) {
           $option.attr('aria-selected', 'true');
+          $option.remove(); 
         } else {
           $option.attr('aria-selected', 'false');
         }
