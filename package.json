@@ -1,5 +1,5 @@
 {
-  "name": "Select2",
+  "name": "@kargo/select2",
   "description": "Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.",
   "homepage": "https://select2.github.io",
   "author": {
@@ -53,5 +53,9 @@
     "grunt-jekyll": "^0.4.2",
     "grunt-sass": "~0.12.0",
     "node-sass": "~0.8.6"
+  },
+  "private": false,
+  "publishConfig": {
+    "registry": "https://brand-274199647570.d.codeartifact.us-east-1.amazonaws.com/npm/shared-npm/"
   }
 }
